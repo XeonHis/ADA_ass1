@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxWidth="350.0" minWidth="350.0" prefHeight="420.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.UI.LoginController">
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="103.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="97.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="133.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="126.0" minHeight="12.0" prefHeight="35.0" />
+            <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="127.0" minHeight="0.0" prefHeight="41.0" valignment="CENTER" />
+            <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="42.0" />
+            <RowConstraints maxHeight="110.0" minHeight="9.0" prefHeight="11.0" />
+         </rowConstraints>
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#connectBtnAction" stylesheets="@../../asset/css/LoginBtn.css" text="Connect" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="Hostname: " textAlignment="CENTER" GridPane.rowIndex="5" />
+            <TextField fx:id="hostnameTextfield" prefWidth="188.0" text="127.0.0.1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Port: " GridPane.rowIndex="6" />
+            <TextField fx:id="portTextfield" prefHeight="13.0" prefWidth="149.0" text="11111" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Username: " GridPane.rowIndex="3" />
+            <TextField fx:id="usernameTextfield" onKeyPressed="#connectMethod" prefHeight="23.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="22.0" prefWidth="144.0" text="Server Configuration" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="defaultImgView" fitHeight="93" fitWidth="93" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asset/images/default.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Button id="minimizedBtn" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#minBtnAction" prefHeight="24.0" prefWidth="45.0" stylesheets="@../../asset/css/LoginBtn.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="closeBtn" fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#closeBtnAction" prefHeight="24.0" prefWidth="45.0" stylesheets="@../../asset/css/LoginBtn.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#randomBtnAction" text="Random" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Text id="actiontarget" fx:id="resultText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

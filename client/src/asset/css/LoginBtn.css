@@ -1,0 +1,11 @@
+#closeBtn {
+    -fx-graphic: url("../images/cross.png");
+    -fx-background-color:transparent;
+    -fx-opacity: 0.9;
+}
+
+#minimizedBtn {
+    -fx-graphic: url("../images/line.png");
+    -fx-background-color: transparent;
+    -fx-opacity: 0.9;
+}
